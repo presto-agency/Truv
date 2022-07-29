@@ -177,6 +177,21 @@
       object-fit: cover;
     }
   }
+  &__btn-wrapper{
+    text-align: center;
+    margin: 64px 0 0 0;
+  }
+  .button-cards{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 500;
+    color: $color-blue;
+    border: 2px solid $color-blue;
+    border-radius: 26px;
+    padding: 8px 16px;
+    min-width: 225px;
+  }
 }
 
 @media (max-width: 1023px) {

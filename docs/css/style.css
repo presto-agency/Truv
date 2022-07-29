@@ -184,6 +184,7 @@ p {
 
 .header {
   position: fixed;
+  z-index: 10;
   width: 100%;
   top: 0;
   left: 0;
@@ -513,6 +514,70 @@ p {
      object-fit: cover;
 }
 
+.cards-block__btn-wrapper {
+  text-align: center;
+  margin: 64px 0 0 0;
+}
+
+.cards-block .button-cards {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #2C64E3;
+  border: 2px solid #2C64E3;
+  border-radius: 26px;
+  padding: 8px 16px;
+  min-width: 225px;
+}
+
+.sign-up {
+  margin: 128px 0 0 0;
+}
+
+.sign-up__content {
+  text-align: center;
+}
+
+.sign-up__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 32px 0 0 0;
+}
+
+.sign-up__input-wrapper input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 16px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.sign-up__input-wrapper button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #2C64E3;
+  padding: 12px 24px;
+  min-width: 209px;
+  border-radius: 26px;
+  color: #fff;
+  margin: 0 0 0 32px;
+}
+
+.sign-up__input-wrapper:nth-child(1) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 375px;
+          flex: 0 1 375px;
+}
+
 @media (max-width: 1023px) {
   .cards-block__content {
     -webkit-box-orient: vertical;
@@ -579,6 +644,24 @@ p {
   .cards-block__img_tab-1 .cards-block__side_accordion.active ul {
     max-height: 120px !important;
   }
+
+  .sign-up__input-wrapper:nth-child(1) {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    width: 100%;
+  }
+
+  .sign-up__input-wrapper button {
+    margin: 32px 0 0 0;
+  }
+
+  .sign-up__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (max-width: 424px) {
@@ -592,7 +675,7 @@ p {
   .h-2,
   .listen__content_text p {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 35px;
   }
 
   p {
