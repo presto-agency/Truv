@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-    setTimeout( function () {showText()}, 500);
+    setTimeout(  () => {showText()}, 500);
     popUp();
 })
 
