@@ -1,0 +1,37 @@
+.listen{
+  margin: 128px 0 64px 0;
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_text{
+      white-space: nowrap;
+      p{
+        @extend .h-2;
+          span{
+          color: $color-blue;
+        }
+      }
+    }
+    &_images{
+      display: flex;
+      flex-wrap: wrap;
+      margin: -8px -8px -8px 16px;
+      img{
+        height: 32px;
+        width: auto;
+        margin: 8px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .listen{
+    &__content{
+      flex-direction: column;
+      &_images{
+        margin: -8px;
+      }
+    }
+  }
+}
