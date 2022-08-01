@@ -293,14 +293,11 @@ p {
   margin: 8px;
 }
 
-.cards-block {
-  margin: 32px 0;
-}
-
 .cards-block__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 32px 0;
 }
 
 .cards-block__side:nth-child(1) {
