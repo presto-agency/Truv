@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     setIdent();
     setTimeout(  () => {showText()}, 500);
     popUp();
