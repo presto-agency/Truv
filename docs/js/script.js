@@ -50,9 +50,6 @@ let showText = () => {
     }
 }
 
-let setIdent = () => {
-
-}
 
 
 
