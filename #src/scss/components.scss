@@ -1,5 +1,7 @@
 .btn-c{
+  position: relative;
   display: inline-block;
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -10,20 +12,40 @@
   &.blue{
     background-color: $color-blue;
     color: #fff;
-    @media (min-width: 1025px) {
-      &:hover{
-        background-color: $color-blue-dark;
-      }
-    }
   }
   &.light{
     border: 2px solid $color-blue;
     background-color: transparent;
     color: $color-blue;
-    @media (min-width: 1025px) {
-      &:hover{
+  }
+  &.icon{
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 16px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/arrow-ico.svg");
+      background-size: 24px 24px;
+      background-position: center;
+      transition: 300ms;
+    }
+  }
+  @media (min-width: 1025px) {
+    &:hover{
+      &.blue{
+        background-color: $color-blue-dark;
+      }
+      &.light{
         background-color: $color-blue;
         color: #fff;
+      }
+      &.icon{
+        &:before{
+          transform: translateX(5px) translateY(-50%);
+        }
       }
     }
   }
