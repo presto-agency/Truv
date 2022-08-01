@@ -4,18 +4,18 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 let popUp = () => {
-    document.querySelectorAll(".trigger").forEach((t) =>
-        t.addEventListener("click", function () {
-            let t = document.querySelector(".cards-block__img_tab-1.active");
-            t && t.classList.remove("active");
-            let e = this.getAttribute("data-attr");
-            document.getElementById(e).classList.add("active");
+    document.querySelectorAll(".trigger").forEach((btn) =>
+        btn.addEventListener("click", function () {
+            let activeTab = document.querySelector(".cards-block__img_tab.active");
+            activeTab && activeTab.classList.remove("active");
+            let tabAttr = this.getAttribute("data-attr");
+            document.getElementById(tabAttr).classList.add("active");
         })
     ),
-        document.querySelectorAll(".sub-close").forEach((t) =>
-            t.addEventListener("click", function () {
-                let t = this.getAttribute("data-close");
-                document.getElementById(t).classList.remove("active");
+        document.querySelectorAll(".sub-close").forEach((btnClose) =>
+            btnClose.addEventListener("click", function () {
+                let closeTabAttr = this.getAttribute("data-close");
+                document.getElementById(closeTabAttr).classList.remove("active");
             })
         );
 }
@@ -49,6 +49,8 @@ let showText = () => {
         })
     }
 }
+
+
 
 
 
