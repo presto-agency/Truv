@@ -651,6 +651,7 @@ p strong {
 
 .analysis__content:before {
   content: "";
+  pointer-events: none;
   position: absolute;
   right: -5px;
   top: 0;
@@ -667,6 +668,11 @@ p strong {
   font-weight: 500;
   letter-spacing: 0.2px;
   margin: 15px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  padding: 0 10px 0 0;
 }
 
 .analysis__content ul li:last-child {
@@ -698,7 +704,7 @@ p strong {
 }
 
 .analysis__headings ul li:first-child {
-  padding: 27px 0 0 0;
+  padding: 27px 10px 0 0;
 }
 
 .analysis__table {
@@ -781,6 +787,30 @@ p strong {
   .cards-block__side:nth-child(2) {
     padding: 30px 0;
   }
+
+  .analysis__headings {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 235px;
+            flex: 0 0 235px;
+  }
+
+  .analysis__headings ul {
+    margin: 54px 30px 0 0;
+  }
+
+  .analysis__content ul li {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    font-size: 18px;
+    line-height: 26px;
+    height: 56px;
+    -webkit-line-clamp: 2;
+  }
+
+  .analysis__table ul li:first-child {
+    padding: 0 0 25px 0;
+    height: initial;
+  }
 }
 
 @media (max-width: 767px) {
@@ -853,6 +883,28 @@ p strong {
 
   .sign-up__btn-wrapper {
     margin: 0;
+  }
+}
+
+@media (max-width: 567px) {
+  .analysis__content ul li {
+    font-size: 16px;
+    line-height: 22px;
+    height: 44px;
+  }
+
+  .analysis__headings {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 125px;
+            flex: 0 0 125px;
+  }
+
+  .analysis__headings ul {
+    margin: 54px 30px 0 0;
+  }
+
+  .analysis__table ul li:first-child {
+    padding: 0 0 30px 0;
   }
 }
 

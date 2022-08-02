@@ -3,7 +3,6 @@
   padding: 82px 0 62px 0;
   p, li{
     color: #fff;
-
   }
   &__title{
     text-align: center;
@@ -16,6 +15,7 @@
     margin: 32px 0 0 0;
     &:before{
       content: '';
+      pointer-events: none;
       position: absolute;
       right: -5px;
       top: 0;
@@ -30,6 +30,11 @@
         font-weight: 500;
         letter-spacing: 0.2px;
         margin: 15px 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        padding: 0 10px 0 0;
         &:last-child{
           margin: 15px 0 30px 0;
         }
@@ -52,7 +57,7 @@
       li{
         text-align: right;
         &:first-child{
-          padding: 27px 0 0 0;
+          padding: 27px 10px 0 0;
         }
       }
     }
@@ -79,5 +84,65 @@
   &__btn-wrapper{
     max-width: 320px;
     margin: 75px auto 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .analysis{
+    &__headings{
+      flex: 0 0 235px;
+      ul{
+        margin: 54px 30px 0 0;
+      }
+    }
+    &__content{
+      ul{
+        li{
+          box-sizing: content-box;
+          font-size: 18px;
+          line-height: 26px;
+          height: 56px;
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+    &__table{
+      ul{
+        li{
+          &:first-child{
+            padding: 0 0 25px 0;
+            height: initial;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 567px) {
+  .analysis{
+    &__content{
+      ul{
+        li{
+          font-size: 16px;
+          line-height: 22px;
+          height: 44px;
+        }
+      }
+    }
+    &__headings{
+      flex: 0 0 125px;
+      ul{
+        margin: 54px 30px 0 0;
+      }
+    }
+    &__table{
+      ul{
+        li{
+          &:first-child{
+            padding: 0 0 30px 0;
+          }
+        }
+      }
+    }
   }
 }
