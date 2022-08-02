@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setIdent();
     setTimeout(  () => {showText()}, 500);
     popUp();
+    sliderCoverage();
 })
 
 let popUp = () => {
@@ -69,6 +70,18 @@ let setIdent = () => {
            closeBtn_2.setAttribute('data-close', `call-${2*n + 2}`);
        })
    }
+}
+
+let sliderCoverage = () => {
+    let slider = document.querySelector('.coverage__swiper');
+    slider?new Swiper('.coverage__swiper', {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        grabCursor: true,
+        speed: 500,
+        loop: true,
+        spaceBetween: 32,
+    }): null;
 }
 
 
