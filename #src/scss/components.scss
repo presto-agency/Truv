@@ -17,6 +17,10 @@
     border: 2px solid $color-blue;
     background-color: transparent;
     color: $color-blue;
+    &.__white{
+      color: #fff;
+      border: 2px solid #fff;
+    }
   }
   &.icon{
     &:before{
@@ -41,6 +45,10 @@
       &.light{
         background-color: $color-blue;
         color: #fff;
+        &.__white{
+          background-color: initial;
+          color: #fff;
+        }
       }
       &.icon{
         &:before{
