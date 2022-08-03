@@ -240,6 +240,10 @@ p strong {
   background-image: url("../img/arrow-ico-b.svg");
 }
 
+.heading-top {
+  text-align: center;
+}
+
 .heading-title {
   position: relative;
   text-align: center;
@@ -260,10 +264,7 @@ p strong {
 .heading-title__marker {
   position: absolute;
   left: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 0;
   width: 184px;
   height: 59px;
   background-image: url("../img/benchmark/triangle.svg");
@@ -280,6 +281,10 @@ p strong {
   color: #fff;
   padding: 16px 45px 16px 28px;
   width: 100%;
+}
+
+.heading-title__subtitle {
+  margin: 40px 0 0 0;
 }
 
 .header {
@@ -789,10 +794,8 @@ p strong {
   margin: 75px auto 0;
 }
 
-.coverage__content > h2,
-.coverage__content > .h-2,
-.coverage__content p {
-  text-align: center;
+.coverage {
+  margin: 0 0 136px 0;
 }
 
 .coverage__btn-wrapper {

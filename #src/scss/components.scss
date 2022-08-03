@@ -69,6 +69,9 @@
     }
   }
 }
+.heading-top{
+  text-align: center;
+}
 .heading-title{
   position: relative;
   text-align: center;
@@ -87,8 +90,7 @@
   &__marker{
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
     width: 184px;
     height: 59px;
     background-image: url("../img/benchmark/triangle.svg");
@@ -104,6 +106,9 @@
       padding: 16px 45px 16px 28px;
       width: 100%;
     }
+  }
+  &__subtitle{
+    margin: 40px 0 0 0;
   }
   @media (max-width: 1199px) {
   .heading-title{
