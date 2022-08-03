@@ -943,6 +943,110 @@ p strong {
      object-fit: cover;
 }
 
+.optimized-tabs__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.optimized-tabs__list {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 632px;
+          flex: 0 1 632px;
+}
+
+.optimized-tabs__list li {
+  cursor: pointer;
+  position: relative;
+  margin: 0 0 16px 0;
+  padding: 16px 24px;
+  border-radius: 20px;
+  counter-increment: counter-step;
+}
+
+.optimized-tabs__list li:before {
+  content: counter(counter-step) ".";
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+}
+
+.optimized-tabs__list li img {
+  display: none;
+}
+
+.optimized-tabs__list li p {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #666666;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.optimized-tabs__list li p:nth-of-type(1) {
+  margin: 0 0 8px 0;
+  padding: 0 0 0 20px;
+}
+
+.optimized-tabs__list li p strong {
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.optimized-tabs__list li.active {
+  background: #2C64E3;
+  -webkit-box-shadow: 0px 8px 8px -6px rgba(44, 100, 227, 0.04), 0px 8px 16px -6px rgba(44, 100, 227, 0.14);
+          box-shadow: 0px 8px 8px -6px rgba(44, 100, 227, 0.04), 0px 8px 16px -6px rgba(44, 100, 227, 0.14);
+}
+
+.optimized-tabs__list li.active:before {
+  color: #fff;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.optimized-tabs__list li.active p,
+.optimized-tabs__list li.active strong {
+  color: #fff;
+}
+
+.optimized-tabs__pictures {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.optimized-tabs__pictures li {
+  display: none;
+  width: 494px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.optimized-tabs__pictures li.active {
+  display: block;
+}
+
+.optimized-tabs__pictures li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (min-width: 1025px) {
   .btn-c:hover.blue {
     background-color: #1d4298;

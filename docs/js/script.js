@@ -1,25 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
     setIdent();
     setTimeout(  () => {showText()}, 500);
-    popUp();
+
+    let triggersOpen = document.querySelectorAll(".trigger");
+    let triggersClose = document.querySelectorAll(".sub-close");
+
+    popUp(triggersOpen,triggersClose, getActivePodcast);
     sliderCoverage();
 })
 
-let popUp = () => {
-    document.querySelectorAll(".trigger").forEach((btn) =>
+let getActivePodcast = () => {
+    let activeTab = document.querySelector(".cards-block__img_tab.active");
+    activeTab && activeTab.classList.remove("active");
+}
+
+let popUp = (triggersOpen, triggersClose, setActive) => {
+    triggersOpen?triggersOpen.forEach((btn) =>
         btn.addEventListener("click", function () {
-            let activeTab = document.querySelector(".cards-block__img_tab.active");
-            activeTab && activeTab.classList.remove("active");
+            setActive();
             let tabAttr = this.getAttribute("data-attr");
             document.getElementById(tabAttr).classList.add("active");
         })
-    ),
-        document.querySelectorAll(".sub-close").forEach((btnClose) =>
-            btnClose.addEventListener("click", function () {
-                let closeTabAttr = this.getAttribute("data-close");
-                document.getElementById(closeTabAttr).classList.remove("active");
-            })
-        );
+    ):null;
+    triggersClose?triggersClose.forEach(btnClose =>
+        btnClose.addEventListener("click", function () {
+            let closeTabAttr = this.getAttribute("data-close");
+            document.getElementById(closeTabAttr).classList.remove("active");
+        })
+    ):null;
 }
 
 let showText = () => {
