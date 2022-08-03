@@ -75,12 +75,19 @@ let setIdent = () => {
 let sliderCoverage = () => {
     let slider = document.querySelector('.coverage__swiper');
     slider?new Swiper('.coverage__swiper', {
-        slidesPerView: 3,
+        slidesPerView: 1,
         slidesPerGroup: 1,
         grabCursor: true,
         speed: 500,
         loop: true,
         spaceBetween: 32,
+        centeredSlides: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                centeredSlides: false,
+            }
+        }
     }): null;
 }
 

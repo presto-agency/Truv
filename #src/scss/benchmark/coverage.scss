@@ -23,7 +23,9 @@
     overflow: hidden;
     p{
       text-align: initial;
-      margin: 0 0 16px 0;
+      &:first-child{
+        margin: 0 0 16px 0;
+      }
       strong{
         font-weight: 600;
         font-size: 40px;
@@ -58,8 +60,7 @@ x          img{
         position: absolute;
         bottom: 32px;
         left: 32px;
-        width: 100%;
-        max-width: 336px;
+        width: calc(100% - 64px);
         height: 12px;
         border-radius: 8px;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #2C64E3;
@@ -104,6 +105,29 @@ x          img{
           }
         }
       }
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .coverage{
+    &__swiper-slide{
+      p{
+        font-size: 16px;
+        &:first-child{
+          margin: 0 0 8px 0;
+        }
+        strong{
+          font-size: 32px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .coverage{
+    &__swiper-slide{
+      max-width: 100%;
     }
   }
 }
