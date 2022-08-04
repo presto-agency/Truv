@@ -1,23 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let cardsBlock = document.querySelector('.cards-block');
+    let optimizedTabs = document.querySelector('.optimized-tabs');
     setIdent();
     setTimeout(  () => {showText()}, 500);
-
-    let triggersOpen = document.querySelectorAll(".trigger");
-    let triggersClose = document.querySelectorAll(".sub-close");
-
-    popUp(triggersOpen,triggersClose, getActivePodcast);
+    cardsBlock?popUp(cardsBlock):null;
+    optimizedTabs?callTabs(optimizedTabs):null;
     sliderCoverage();
 })
 
-let getActivePodcast = () => {
-    let activeTab = document.querySelector(".cards-block__img_tab.active");
-    activeTab && activeTab.classList.remove("active");
-}
-
-let popUp = (triggersOpen, triggersClose, setActive) => {
+let popUp = (currentBlock) => {
+    let triggersOpen = document.querySelectorAll(".trigger");
+    let triggersClose = document.querySelectorAll(".sub-close");
     triggersOpen?triggersOpen.forEach((btn) =>
         btn.addEventListener("click", function () {
-            setActive();
+            let activeTab = currentBlock.querySelector(".active");
+            activeTab && activeTab.classList.remove("active");
             let tabAttr = this.getAttribute("data-attr");
             document.getElementById(tabAttr).classList.add("active");
         })
@@ -97,6 +94,20 @@ let sliderCoverage = () => {
             }
         }
     }): null;
+}
+
+function callTabs(optimizedTabs) {
+    let elementsLink = document.querySelectorAll('.trigger');
+    elementsLink.forEach(link => link.addEventListener('click', function () {
+        let attr = this.getAttribute('data-attr');
+        const activeLink = optimizedTabs.querySelectorAll('.active');
+        let subWindow = document.getElementById(attr);
+        activeLink.forEach(active => {
+            active.classList.remove('active');
+        })
+        subWindow.classList.add('active');
+        link.classList.add('active');
+    }))
 }
 
 
