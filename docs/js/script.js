@@ -153,6 +153,7 @@ let counterList = (sections) => {
         }
     })
 };
+;
 
 
 
