@@ -1,4 +1,5 @@
 .benchmark-industry{
+  margin: 80px 0 141px 0;
   &__swiper{
     margin: 64px 0 0 0;
   }
@@ -27,34 +28,6 @@
           line-height: 36px;
         }
       }
-      a{
-        position: relative;
-        display: inline-block;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 26px;
-        margin: 16px 0 0 0;
-        padding: 0 44px 0 0;
-        &:before{
-          content: '';
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 32px;
-          height: 32px;
-          background-size: 32px 32px;
-          background-image: url("../img/benchmark/card-arrow.svg");
-          transition: 300ms;
-        }
-        @media (min-width: 1024px) {
-          &:hover{
-            &:before{
-              transform: translateX(10px) translateY(-50%);
-            }
-          }
-        }
-      }
       img{
         position: absolute;
         bottom: 32px;
@@ -80,6 +53,7 @@
 }
 @media (max-width:767px) {
   .benchmark-industry{
+    margin: 80px 0;
     &__swiper-wrapper{
       li{
         padding: 24px;

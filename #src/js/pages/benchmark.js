@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     counterList(optimizedTabs);
     window.screen.width < 1024?sliderTabs(identPagination_1):null;
     window.screen.width < 1024?sliderTabs(identPagination_2):null;
-    sliderIndustry()
+    sliderIndustry();
+    sliderClients();
 })
 
 let sliderCoverage = () => {
@@ -92,5 +93,20 @@ let sliderIndustry = () => {
                 slidesPerView: 2,
             }
         }
+    }): null;
+}
+
+let sliderClients = () => {
+    let slider = document.querySelector('.benchmark-industry__swiper');
+    slider?new Swiper('.our-clients__swiper', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        speed: 500,
+        spaceBetween: 32,
+        grabCursor: true,
+        pagination: {
+            el: '.our-clients__pagination',
+            type: 'bullets',
+        },
     }): null;
 }
