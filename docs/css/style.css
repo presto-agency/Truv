@@ -943,6 +943,22 @@ p strong {
      object-fit: cover;
 }
 
+.optimized-tabs {
+  margin: 133px 0;
+}
+
+.optimized-tabs.revert .optimized-tabs__swiper {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.optimized-tabs.revert .optimized-tabs__pictures {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
 .optimized-tabs__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1014,6 +1030,7 @@ p strong {
 
 .optimized-tabs__pictures li {
   display: none;
+  padding: 0 20px;
   width: 494px;
   margin: 0 auto;
   height: 100%;
@@ -1199,47 +1216,6 @@ p strong {
   }
 }
 
-@media (max-width: 1024px) {
-  .optimized-tabs__pictures {
-    display: none;
-  }
-
-  .optimized-tabs__swiper {
-    -webkit-box-flex: initial;
-        -ms-flex: initial;
-            flex: initial;
-  }
-
-  .optimized-tabs__list li {
-    margin: 0;
-  }
-
-  .optimized-tabs__list li p {
-    text-align: center;
-  }
-
-  .optimized-tabs__list li p:nth-of-type(1) {
-    padding: 0;
-  }
-
-  .optimized-tabs__list li p:nth-of-type(1) b {
-    position: static;
-    top: initial;
-    left: initial;
-  }
-
-  .optimized-tabs__list li img {
-    display: block;
-    max-height: 520px;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .optimized-tabs__btn-wrapper {
-    margin: 32px auto 0;
-  }
-}
-
 @media (max-width: 1023px) {
   .cards-block__content {
     -webkit-box-orient: vertical;
@@ -1289,6 +1265,46 @@ p strong {
 
   .coverage__swiper-slide {
     max-width: 100%;
+  }
+
+  .optimized-tabs__pictures {
+    display: none;
+  }
+
+  .optimized-tabs__swiper {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+  }
+
+  .optimized-tabs__list li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .optimized-tabs__list li p {
+    text-align: center;
+  }
+
+  .optimized-tabs__list li p:nth-of-type(1) {
+    padding: 0;
+  }
+
+  .optimized-tabs__list li p:nth-of-type(1) b {
+    position: static;
+    top: initial;
+    left: initial;
+  }
+
+  .optimized-tabs__list li img {
+    display: block;
+    max-height: 520px;
+    max-width: 100%;
+    margin: 0 auto 32px;
+  }
+
+  .optimized-tabs__btn-wrapper {
+    margin: 32px auto 0;
   }
 }
 
