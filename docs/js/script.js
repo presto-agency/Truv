@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     counterList(optimizedTabs);
     window.screen.width < 1024?sliderTabs(identPagination_1):null;
     window.screen.width < 1024?sliderTabs(identPagination_2):null;
+    sliderIndustry()
 })
 
 let sliderCoverage = () => {
@@ -115,7 +116,7 @@ let sliderTabs = (ident) => {
         speed: 500,
         spaceBetween: 32,
         pagination: {
-            el: `.optimized-tabs__pagination${ident}`,
+            el: `.pagination${ident}`,
             type: 'bullets',
         },
         navigation: {
@@ -152,8 +153,26 @@ let counterList = (sections) => {
             }
         }
     })
+}
+
+let sliderIndustry = () => {
+    let slider = document.querySelector('.benchmark-industry__swiper');
+    slider?new Swiper('.benchmark-industry__swiper', {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        speed: 500,
+        spaceBetween: 32,
+        pagination: {
+            el: '.benchmark-industry__pagination',
+            type: 'bullets',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 2,
+            }
+        }
+    }): null;
 };
-;
 
 
 

@@ -1,0 +1,101 @@
+.benchmark-industry{
+  &__swiper{
+    margin: 64px 0 0 0;
+  }
+  &__swiper-wrapper{
+    li{
+      position: relative;
+      padding: 32px;
+      max-width: 616px;
+      height: 300px;
+      background-color: $color-grey-dark;
+      border-radius: 20px;
+      p, strong, a{
+        color: #fff;
+      }
+      p{
+        &:first-of-type{
+          margin: 0 0 8px 0;
+        }
+        max-width: 389px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        strong{
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 36px;
+        }
+      }
+      a{
+        position: relative;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 16px 0 0 0;
+        padding: 0 44px 0 0;
+        &:before{
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 32px;
+          height: 32px;
+          background-size: 32px 32px;
+          background-image: url("../img/benchmark/card-arrow.svg");
+          transition: 300ms;
+        }
+        @media (min-width: 1024px) {
+          &:hover{
+            &:before{
+              transform: translateX(10px) translateY(-50%);
+            }
+          }
+        }
+      }
+      img{
+        position: absolute;
+        bottom: 32px;
+        right: 32px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  &__btn-wrapper{
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1023px) {
+  .benchmark-industry{
+    &__swiper-wrapper{
+      li{
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media (max-width:767px) {
+  .benchmark-industry{
+    &__swiper-wrapper{
+      li{
+        padding: 24px;
+        p{
+          font-size: 16px;
+          line-height: 22px;
+          strong{
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+        img{
+          right: 24px;
+          bottom: 24px;
+        }
+      }
+    }
+  }
+}

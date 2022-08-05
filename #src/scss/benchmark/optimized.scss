@@ -133,19 +133,6 @@
       }
     }
   }
-  &__pagination{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin: 55px 0 42px 0;
-    .swiper-pagination-bullet{
-      background-color: #CCCCCC;
-      margin: 0 8px!important;
-      &.swiper-pagination-bullet-active{
-        background-color: #808080;
-      }
-    }
-  }
   &__btn-wrapper{
     max-width: 320px;
     margin: 64px auto 0;
