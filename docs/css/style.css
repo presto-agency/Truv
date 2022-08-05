@@ -1379,6 +1379,10 @@ p strong {
   .sign-up__btn-wrapper {
     margin: 0;
   }
+
+  .optimized-tabs__arrow {
+    display: none;
+  }
 }
 
 @media (max-width: 567px) {
@@ -1400,12 +1404,6 @@ p strong {
 
   .analysis__table ul li:first-child {
     padding: 0 0 30px 0;
-  }
-}
-
-@media (max-width: 474px) {
-  .optimized-tabs__arrow {
-    display: none;
   }
 }
 
