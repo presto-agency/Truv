@@ -971,6 +971,22 @@ p strong {
           flex: 0 1 632px;
 }
 
+.optimized-tabs__list.counting li p:nth-of-type(1) {
+  padding: 0 0 0 20px;
+}
+
+.optimized-tabs__list.counting li p:nth-of-type(1) b {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+  color: #000;
+}
+
 .optimized-tabs__list li {
   cursor: pointer;
   position: relative;
@@ -996,19 +1012,10 @@ p strong {
 .optimized-tabs__list li p:nth-of-type(1) {
   position: relative;
   margin: 0 0 8px 0;
-  padding: 0 0 0 20px;
 }
 
 .optimized-tabs__list li p:nth-of-type(1) b {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.4px;
-  color: #000;
+  display: none;
 }
 
 .optimized-tabs__list li p strong {
@@ -1119,8 +1126,7 @@ p strong {
     color: #fff;
   }
 
-  .optimized-tabs__list li.active p b,
-  .optimized-tabs__list li.active strong b {
+  .optimized-tabs__list li.active p:nth-of-type(1) b {
     color: #fff;
   }
 

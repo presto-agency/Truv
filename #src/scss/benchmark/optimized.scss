@@ -17,6 +17,26 @@
     flex: 0 1 632px;
   }
   &__list{
+    &.counting{
+      li{
+        p{
+          &:nth-of-type(1){
+            padding: 0 0 0 20px;
+            b{
+              display: block;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 28px;
+              letter-spacing: 0.4px;
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
     @media (min-width: 1024px) {
       display: block;
       width: initial;
@@ -40,17 +60,8 @@
         &:nth-of-type(1){
           position: relative;
           margin: 0 0 8px 0;
-          padding: 0 0 0 20px;
           b{
-            content: '';
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 28px;
-            letter-spacing: 0.4px;
-            color: $color-black;
+            display: none;
           }
         }
         strong{
@@ -70,8 +81,12 @@
           }
           p, strong{
             color: #fff;
-            b{
-              color: #fff;
+          }
+          p{
+            &:nth-of-type(1){
+              b{
+                color: #fff;
+              }
             }
           }
           background: $color-blue;

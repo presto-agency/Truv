@@ -66,7 +66,7 @@ let callTabs = (optimizedTabs)=>{
 
 let counterList = (sections) => {
     sections.forEach(section => {
-        let numbers = section.querySelectorAll('.optimized-tabs__list>li>p>b');
+        let numbers = section.querySelectorAll('.optimized-tabs__list.counting>li>p>b');
         if(numbers.length>0){
             for(let i = 0; i < numbers.length; i++){
                 numbers[i].innerHTML = `${i + 1}.`;
