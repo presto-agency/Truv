@@ -1228,7 +1228,7 @@ p strong {
 }
 
 .our-clients .card-client__picture-wrapper img {
-  width: 64px;
+  width: auto;
   height: 64px;
   margin: 0 0 16px 0;
 }
@@ -1483,6 +1483,48 @@ p strong {
   .benchmark-industry__swiper-wrapper li {
     max-width: 100%;
   }
+
+  .our-clients .card-client {
+    padding: 32px 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+  }
+
+  .our-clients .card-client__picture {
+    margin: 32px 0 0 0;
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    background-color: #fff;
+  }
+
+  .our-clients .card-client__picture p {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .our-clients .card-client__picture p strong {
+    color: rgb(0, 0, 0);
+  }
+
+  .our-clients .card-client__text {
+    padding: 0;
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .our-clients .card-client__text a {
+    margin: 32px 0 0 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1624,6 +1666,12 @@ p strong {
   p {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .our-clients .card-client__text p {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
   }
 }
 

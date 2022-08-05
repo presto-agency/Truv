@@ -1,7 +1,5 @@
 .our-clients{
   margin: 64px 0 33px 0;
-  &__swiper{
-  }
   .card-client{
     display: flex;
     min-height:400px;
@@ -19,7 +17,7 @@
           color: #fff;
         }
         img{
-          width: 64px;
+          width: auto;
           height: 64px;
           margin: 0 0 16px 0;
         }
@@ -39,6 +37,48 @@
       }
       a{
         align-self: flex-start;
+      }
+    }
+  }
+}
+@media(max-width: 1023px){
+  .our-clients{
+    .card-client{
+      padding: 32px 24px;
+      flex-direction: column;
+      background-color: #fff;
+      &__picture{
+        margin: 32px 0 0 0;
+        flex: initial;
+        order: 2;
+        background-color: #fff;
+        p{
+          color: rgba(0, 0, 0, 0.5);
+          strong{
+            color: rgba(0, 0, 0, 1);
+          }
+        }
+      }
+      &__text{
+        padding: 0;
+        flex: initial;
+        order: 1;
+        a{
+          margin: 32px 0 0 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 424px) {
+  .our-clients{
+    .card-client{
+      &__text{
+        p{
+          font-size: 20px;
+          line-height: 28px;
+          letter-spacing: 0.4px;
+        }
       }
     }
   }
