@@ -976,7 +976,7 @@ p strong {
 }
 
 .optimized-tabs__list.counting li p:nth-of-type(1) b {
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1283,6 +1283,16 @@ p strong {
             flex: initial;
   }
 
+  .optimized-tabs__list.counting li p:nth-of-type(1) {
+    padding: 0;
+  }
+
+  .optimized-tabs__list.counting li p:nth-of-type(1) b {
+    position: static;
+    top: initial;
+    left: initial;
+  }
+
   .optimized-tabs__list li {
     margin: 0;
     padding: 0;
@@ -1290,16 +1300,6 @@ p strong {
 
   .optimized-tabs__list li p {
     text-align: center;
-  }
-
-  .optimized-tabs__list li p:nth-of-type(1) {
-    padding: 0;
-  }
-
-  .optimized-tabs__list li p:nth-of-type(1) b {
-    position: static;
-    top: initial;
-    left: initial;
   }
 
   .optimized-tabs__list li img {

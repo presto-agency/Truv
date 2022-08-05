@@ -23,7 +23,7 @@
           &:nth-of-type(1){
             padding: 0 0 0 20px;
             b{
-              display: block;
+              display: inline-block;
               position: absolute;
               top: 0px;
               left: 0px;
@@ -160,19 +160,25 @@
       flex: initial;
     }
     &__list{
+      &.counting{
+        li{
+          p{
+            &:nth-of-type(1){
+              padding: 0;
+              b{
+                position: static;
+                top: initial;
+                left: initial;
+              }
+            }
+          }
+        }
+      }
       li{
         margin: 0;
         padding: 0;
         p{
           text-align: center;
-          &:nth-of-type(1){
-            b{
-              position: static;
-              top: initial;
-              left: initial;
-            }
-            padding: 0;
-          }
         }
         img{
           display: block;
