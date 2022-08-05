@@ -1,0 +1,36 @@
+.give-us{
+  padding: 200px 0;
+  background-color: $color-blue ;
+  h2{
+    text-align: center;
+    color: #fff;
+  }
+  &__btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0 0;
+    a{
+      max-width: 225px;
+    }
+    a + a{
+      margin: 0 0 0 32px;
+    }
+  }
+}
+
+@media (max-width: 424px) {
+  .give-us{
+    padding: 70px 0;
+    &__btn-wrapper{
+      flex-direction: column;
+      max-width: 225px;
+      margin: 40px auto 0;
+      a{
+        max-width: 100%;
+      }
+      a + a{
+        margin: 16px 0 0 0;
+      }
+    }
+  }
+}

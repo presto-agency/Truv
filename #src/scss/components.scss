@@ -22,6 +22,11 @@
       border: 2px solid #fff;
     }
   }
+  &.white{
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: $color-blue;
+  }
   &.icon{
     &:before{
       content: '';
@@ -55,6 +60,10 @@
           background-color: initial;
           color: #fff;
         }
+      }
+      &.white{
+        background-color: $color-blue;
+        color: #fff;
       }
       &.icon{
         &.__blue{

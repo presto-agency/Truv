@@ -145,7 +145,7 @@ h6 {
 
 .grey-wrapper {
   background-color: #F5F5F5;
-  padding: 128px 0 192px 0;
+  padding: 128px 0 0 0;
 }
 
 h1,
@@ -215,6 +215,12 @@ p strong {
 .btn-c.light.__white {
   color: #fff;
   border: 2px solid #fff;
+}
+
+.btn-c.white {
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #2C64E3;
 }
 
 .btn-c.icon:before {
@@ -687,7 +693,7 @@ p strong {
 }
 
 .sign-up {
-  margin: 128px 0 0 0;
+  padding: 128px 0;
 }
 
 .sign-up__content {
@@ -1262,6 +1268,37 @@ p strong {
       align-self: flex-start;
 }
 
+.give-us {
+  padding: 200px 0;
+  background-color: #2C64E3;
+}
+
+.give-us h2,
+.give-us .h-2,
+.give-us .listen__content_text p,
+.listen__content_text .give-us p {
+  text-align: center;
+  color: #fff;
+}
+
+.give-us__btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 32px 0 0 0;
+}
+
+.give-us__btn-wrapper a {
+  max-width: 225px;
+}
+
+.give-us__btn-wrapper a + a {
+  margin: 0 0 0 32px;
+}
+
 @media (min-width: 1024px) {
   .link-arrow:hover:before {
     -webkit-transform: translateX(10px) translateY(-50%);
@@ -1314,6 +1351,11 @@ p strong {
 
   .btn-c:hover.light.__white {
     background-color: initial;
+    color: #fff;
+  }
+
+  .btn-c:hover.white {
+    background-color: #2C64E3;
     color: #fff;
   }
 
@@ -1672,6 +1714,27 @@ p strong {
     font-size: 20px;
     line-height: 28px;
     letter-spacing: 0.4px;
+  }
+
+  .give-us {
+    padding: 70px 0;
+  }
+
+  .give-us__btn-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 225px;
+    margin: 40px auto 0;
+  }
+
+  .give-us__btn-wrapper a {
+    max-width: 100%;
+  }
+
+  .give-us__btn-wrapper a + a {
+    margin: 16px 0 0 0;
   }
 }
 
