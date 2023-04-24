@@ -45,4 +45,6 @@ yarn start
 
 deploy to gh-pages automatically after push to branch
 
-deploy: [gh-pages](https://presto-agency.github.io/Truv/)
+deploy:
+[main](https://presto-agency.github.io/Truv/),
+[benchmark](https://presto-agency.github.io/Truv/benchmark.html),
